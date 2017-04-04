@@ -1,4 +1,4 @@
-function I2 = align(I,M)
+function I3 = align(I,M)
 
 mPoints = [];
 for i=1:4
@@ -16,3 +16,5 @@ fPoints = [x1 y1; x2 y1; x1 y2;x2 y2];
 
 T = fitgeotrans(mPoints, fPoints, 'projective');
 I2 = imwarp(I,T);
+
+I3 = imcrop(I2,[x1 y1 (x2-x1) (y2-y1)]);
