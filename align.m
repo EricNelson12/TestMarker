@@ -14,7 +14,7 @@ y1 = min(mPoints(:,2));
 y2 = max(mPoints(:,2));
 fPoints = [x1 y1; x2 y1; x1 y2;x2 y2];
 
-T = fitgeotrans(mPoints, fPoints, 'projective');
+T = fitgeotrans(mPoints, fPoints, 'affine');
 I2 = imwarp(I,T);
 
 I3 = imcrop(I2,[x1 y1 (x2-x1) (y2-y1)]);
