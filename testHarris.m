@@ -13,8 +13,6 @@ I = imopen(I,se);
 se = strel('square',45);
 I = imclose(I,se);
 
-
-
 %%Test Harris
 [r,c] = getcorners(I,'h',10,.1,.001);
 

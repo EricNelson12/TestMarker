@@ -48,7 +48,3 @@ corners = R > thresh;
 
 
 [r,c] = find(corners == 1);
-
-
-
-

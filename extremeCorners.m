@@ -1,10 +1,10 @@
 function output = extremeCorners(M)
-C(:,1) = sum(M,2);
+C(:,4) = sum(M,2);
 
 for h = 1 : size(M, 1)
-    C(h,2) = M(h,1) - M(h,2);
-    C(h,3) = M(h,2) - M(h,1);
-    C(h,4) = 0 - M(h,2) - M(h,1);
+    C(h,3) = M(h,1) - M(h,2);
+    C(h,2) = M(h,2) - M(h,1);
+    C(h,1) = 0 - M(h,2) - M(h,1);
 end
 
 [A, I] = max(C);
